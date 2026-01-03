@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Path Academy - Programming & AI for Kids</title>
+    <meta name="description"
+        content="Interactive programming and AI academy where kids learn coding, build games, and create smart AI programs through fun activities">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Bubblegum+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shape shape-1">💻</div>
+        <div class="floating-shape shape-2">🤖</div>
+        <div class="floating-shape shape-3">🚀</div>
+        <div class="floating-shape shape-4">⚡</div>
+        <div class="floating-shape shape-5">�</div>
+        <div class="floating-shape shape-6">🔧</div>
+    </div>
+
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="screen active">
+        <div class="container">
+            <div class="welcome-content">
+                <h1 class="main-title">
+                    <span class="title-emoji">🌟</span>
+                    Choose Your Path
+                    <span class="title-text-gradient">Academy</span>
+                </h1>
+                <p class="subtitle">Where every kid becomes a coding superhero and AI wizard!</p>
+
+                <div class="welcome-card">
+                    <div class="card-icon">👋</div>
+                    <h2>Welcome, Future Programmer!</h2>
+                    <p>Ready to learn coding, AI, and build amazing tech projects? Let's pick your awesome avatar!</p>
+                </div>
+
+                <button class="btn btn-primary btn-large" id="startBtn">
+                    <span>Start Your Adventure</span>
+                    <span class="btn-icon">🚀</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avatar Selection Screen -->
+    <div id="avatarScreen" class="screen">
+        <div class="container">
+            <div class="screen-header">
+                <h2 class="screen-title">Choose Your Avatar!</h2>
+                <p class="screen-subtitle">Pick your awesome character to begin the adventure</p>
+            </div>
+
+            <div class="avatar-grid">
+                <div class="avatar-card" data-avatar="scientist">
+                    <div class="avatar-image">
+                        <img src="assets/avatar-scientist.png" alt="Scientist Kid" id="scientistAvatar">
+                    </div>
+                    <div class="avatar-info">
+                        <h3 class="avatar-name">Science Explorer 🔬</h3>
+                        <p class="avatar-desc">Discover the wonders of science!</p>
+                    </div>
+                    <div class="avatar-badges">
+                        <span class="badge badge-blue">Curious</span>
+                        <span class="badge badge-purple">Smart</span>
+                    </div>
+                </div>
+
+                <div class="avatar-card" data-avatar="artist">
+                    <div class="avatar-image">
+                        <img src="assets/avatar-artist.png" alt="Artist Kid" id="artistAvatar">
+                    </div>
+                    <div class="avatar-info">
+                        <h3 class="avatar-name">Creative Artist 🎨</h3>
+                        <p class="avatar-desc">Paint your imagination!</p>
+                    </div>
+                    <div class="avatar-badges">
+                        <span class="badge badge-pink">Creative</span>
+                        <span class="badge badge-orange">Artistic</span>
+                    </div>
+                </div>
+
+                <div class="avatar-card" data-avatar="athlete">
+                    <div class="avatar-image">
+                        <img src="assets/avatar-athlete.png" alt="Athlete Kid" id="athleteAvatar">
+                    </div>
+                    <div class="avatar-info">
+                        <h3 class="avatar-name">Super Athlete ⚽</h3>
+                        <p class="avatar-desc">Active and energetic!</p>
+                    </div>
+                    <div class="avatar-badges">
+                        <span class="badge badge-green">Active</span>
+                        <span class="badge badge-yellow">Strong</span>
+                    </div>
+                </div>
+
+                <div class="avatar-card" data-avatar="musician">
+                    <div class="avatar-image">
+                        <img src="assets/avatar-musician.png" alt="Musician Kid" id="musicianAvatar">
+                    </div>
+                    <div class="avatar-info">
+                        <h3 class="avatar-name">Music Star 🎵</h3>
+                        <p class="avatar-desc">Feel the rhythm!</p>
+                    </div>
+                    <div class="avatar-badges">
+                        <span class="badge badge-purple">Talented</span>
+                        <span class="badge badge-pink">Musical</span>
+                    </div>
+                </div>
+
+                <div class="avatar-card" data-avatar="reader">
+                    <div class="avatar-image">
+                        <img src="assets/avatar-reader.png" alt="Reader Kid" id="readerAvatar">
+                    </div>
+                    <div class="avatar-info">
+                        <h3 class="avatar-name">Book Explorer 📚</h3>
+                        <p class="avatar-desc">Adventure in every page!</p>
+                    </div>
+                    <div class="avatar-badges">
+                        <span class="badge badge-blue">Wise</span>
+                        <span class="badge badge-green">Adventurous</span>
+                    </div>
+                </div>
+
+                <div class="avatar-card" data-avatar="tech">
+                    <div class="avatar-image">
+                        <img src="assets/avatar-tech.png" alt="Tech Kid" id="techAvatar">
+                    </div>
+                    <div class="avatar-info">
+                        <h3 class="avatar-name">Tech Genius 💻</h3>
+                        <p class="avatar-desc">Code the future!</p>
+                    </div>
+                    <div class="avatar-badges">
+                        <span class="badge badge-cyan">Innovative</span>
+                        <span class="badge badge-blue">Tech-Savvy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Path Selection Screen -->
+    <div id="pathScreen" class="screen">
+        <div class="container">
+            <div class="screen-header">
+                <div class="selected-avatar-display" id="selectedAvatarDisplay"></div>
+                <h2 class="screen-title">Choose Your Learning Path!</h2>
+                <p class="screen-subtitle">Which tech skill do you want to master today?</p>
+            </div>
+
+            <div class="paths-grid">
+                <div class="path-card" data-path="python">
+                    <div class="path-icon">�</div>
+                    <h3 class="path-title">Python Coding</h3>
+                    <p class="path-desc">Learn to code like a pro!</p>
+                    <ul class="path-features">
+                        <li>💻 Interactive coding</li>
+                        <li>� Build fun games</li>
+                        <li>🏆 Coding challenges</li>
+                    </ul>
+                    <button class="btn btn-secondary">Start Coding</button>
+                </div>
+
+                <div class="path-card" data-path="ai">
+                    <div class="path-icon">🤖</div>
+                    <h3 class="path-title">AI & Machine Learning</h3>
+                    <p class="path-desc">Create smart AI programs!</p>
+                    <ul class="path-features">
+                        <li>� Train AI models</li>
+                        <li>� Image recognition</li>
+                        <li>�️ Voice assistants</li>
+                    </ul>
+                    <button class="btn btn-secondary">Start Learning</button>
+                </div>
+
+                <div class="path-card" data-path="web">
+                    <div class="path-icon">�</div>
+                    <h3 class="path-title">Web Development</h3>
+                    <p class="path-desc">Build awesome websites!</p>
+                    <ul class="path-features">
+                        <li>🎨 HTML & CSS</li>
+                        <li>⚡ JavaScript magic</li>
+                        <li>📱 Responsive design</li>
+                    </ul>
+                    <button class="btn btn-secondary">Start Learning</button>
+                </div>
+
+                <div class="path-card" data-path="games">
+                    <div class="path-icon">�</div>
+                    <h3 class="path-title">Game Development</h3>
+                    <p class="path-desc">Create your own games!</p>
+                    <ul class="path-features">
+                        <li>🕹️ Game design</li>
+                        <li>👾 Character creation</li>
+                        <li>� Level building</li>
+                    </ul>
+                    <button class="btn btn-secondary">Start Learning</button>
+                </div>
+
+                <div class="path-card" data-path="robotics">
+                    <div class="path-icon">🤖</div>
+                    <h3 class="path-title">Robotics</h3>
+                    <p class="path-desc">Build and program robots!</p>
+                    <ul class="path-features">
+                        <li>� Robot building</li>
+                        <li>⚙️ Motor control</li>
+                        <li>🎯 Sensor programming</li>
+                    </ul>
+                    <button class="btn btn-secondary">Start Learning</button>
+                </div>
+
+                <div class="path-card" data-path="scratch">
+                    <div class="path-icon">🎨</div>
+                    <h3 class="path-title">Scratch Programming</h3>
+                    <p class="path-desc">Code with blocks!</p>
+                    <ul class="path-features">
+                        <li>🧩 Visual coding</li>
+                        <li>🎬 Animations</li>
+                        <li>� Interactive stories</li>
+                    </ul>
+                    <button class="btn btn-secondary">Start Learning</button>
+                </div>
+            </div>
+
+            <button class="btn btn-outline btn-back" id="backToAvatar">
+                <span class="btn-icon">←</span>
+                <span>Change Avatar</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">🎉</div>
+            <h2>Awesome Choice!</h2>
+            <p id="successMessage">You're all set to start your learning adventure!</p>
+            <button class="btn btn-primary" id="closeModal">Let's Go!</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

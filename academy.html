@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Academy - Learn Programming & AI for Kids & Teens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/academy.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🚀</div>
+                <span>Arrow <span style="font-weight: 400;">Academy</span></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#age-groups" class="nav-link">Age Groups</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#ai-education" class="nav-link">AI Learning</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#enroll" class="btn btn-primary">Start Learning 🎯</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Ages 10-18 • Programming & AI</div>
+
+                <h1 class="hero-title">
+                    Learn <span class="hero-gradient-text">Coding</span> & <span class="hero-gradient-text">AI</span>
+                    the Fun Way!
+                </h1>
+
+                <p class="hero-description">
+                    Join thousands of young innovators learning programming, artificial intelligence, and how to use
+                    technology responsibly. Build games, apps, and AI projects!
+                </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">5,00+</div>
+                        <div class="hero-stat-label">Students</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">15+</div>
+                        <div class="hero-stat-label">Courses</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">98%</div>
+                        <div class="hero-stat-label">Parent Satisfaction</div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#courses" class="btn btn-primary">Explore Courses 🚀</a>
+                    <a href="#age-groups" class="btn btn-secondary">Find My Level</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-illustration">
+                    <!-- 3D Kid Coding Illustration -->
+                    <div class="hero-image-container">
+                        <img src="assets/hero-kid-coding.png" alt="Kid learning coding and AI" class="hero-image">
+                    </div>
+
+                    <!-- Floating Icons -->
+                    <div class="floating-icon icon-1">💻</div>
+                    <div class="floating-icon icon-2">🤖</div>
+                    <div class="floating-icon icon-3">🎨</div>
+                    <div class="floating-icon icon-4">⚡</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Groups Section -->
+    <section class="age-groups" id="age-groups">
+        <div class="section-header reveal">
+            <div class="section-badge">Age Groups</div>
+            <h2 class="section-title">Find Your Perfect Level</h2>
+            <p class="section-description">
+                We have specially designed programs for every age group, from beginners to advanced coders!
+            </p>
+        </div>
+
+        <div class="age-grid">
+            <div class="age-card reveal">
+                <span class="age-emoji">🎮</span>
+                <div class="age-range">10 - 12 Years</div>
+                <div class="age-label">Young Explorers</div>
+                <p class="age-description">
+                    Perfect for beginners! Learn the basics through fun games and creative projects.
+                </p>
+                <ul class="age-skills">
+                    <li>Scratch & Block Coding</li>
+                    <li>Game Development Basics</li>
+                    <li>Logic & Problem Solving</li>
+                    <li>Creative Animations</li>
+                    <li>Introduction to AI</li>
+                </ul>
+                <a href="#courses" class="btn btn-primary" style="width: 100%;">View Courses</a>
+            </div>
+
+            <div class="age-card reveal">
+                <span class="age-emoji">🚀</span>
+                <div class="age-range">13 - 15 Years</div>
+                <div class="age-label">Tech Builders</div>
+                <p class="age-description">
+                    Ready to code! Build real websites, apps, and understand how AI works.
+                </p>
+                <ul class="age-skills">
+                    <li>Python Programming</li>
+                    <li>Web Development (HTML/CSS/JS)</li>
+                    <li>Mobile App Development</li>
+                    <li>AI & Machine Learning Basics</li>
+                    <li>Real Project Building</li>
+                </ul>
+                <a href="#courses" class="btn btn-primary" style="width: 100%;">View Courses</a>
+            </div>
+
+            <div class="age-card reveal">
+                <span class="age-emoji">⚡</span>
+                <div class="age-range">16 - 18 Years</div>
+                <div class="age-label">Young Innovators</div>
+                <p class="age-description">
+                    Advanced skills! Create professional projects and prepare for your tech career.
+                </p>
+                <ul class="age-skills">
+                    <li>Advanced Programming</li>
+                    <li>Full-Stack Development</li>
+                    <li>AI & Deep Learning</li>
+                    <li>Cloud Computing</li>
+                    <li>Portfolio Projects</li>
+                </ul>
+                <a href="#courses" class="btn btn-primary" style="width: 100%;">View Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section class="learning-path">
+        <div class="section-header reveal">
+            <div class="section-badge">Learning Journey</div>
+            <h2 class="section-title">Your Path to Success</h2>
+            <p class="section-description">
+                Follow our proven step-by-step learning path from beginner to expert
+            </p>
+        </div>
+
+        <div class="path-container">
+            <div class="path-line"></div>
+
+            <div class="path-item reveal">
+                <div class="path-content">
+                    <div class="path-number">1</div>
+                    <h3 class="path-title">Start with Basics</h3>
+                    <p class="path-description">
+                        Begin your journey with fun, visual programming. Learn logic, problem-solving, and computational
+                        thinking through games and animations.
+                    </p>
+                    <ul class="path-features">
+                        <li>Block-based coding (Scratch)</li>
+                        <li>Basic programming concepts</li>
+                        <li>Creative projects</li>
+                        <li>Interactive games</li>
+                    </ul>
+                </div>
+                <div class="path-dot"></div>
+                <div></div>
+            </div>
+
+            <div class="path-item reveal">
+                <div></div>
+                <div class="path-content">
+                    <div class="path-number">2</div>
+                    <h3 class="path-title">Learn Real Coding</h3>
+                    <p class="path-description">
+                        Master Python and JavaScript. Build websites, create apps, and understand how professional
+                        developers work.
+                    </p>
+                    <ul class="path-features">
+                        <li>Python programming</li>
+                        <li>Web development</li>
+                        <li>App creation</li>
+                        <li>Real-world projects</li>
+                    </ul>
+                </div>
+                <div class="path-dot"></div>
+            </div>
+
+            <div class="path-item reveal">
+                <div class="path-content">
+                    <div class="path-number">3</div>
+                    <h3 class="path-title">Discover AI & Machine Learning</h3>
+                    <p class="path-description">
+                        Understand artificial intelligence, create smart programs, and learn how to use AI responsibly
+                        and ethically.
+                    </p>
+                    <ul class="path-features">
+                        <li>AI fundamentals</li>
+                        <li>Machine learning basics</li>
+                        <li>Responsible AI usage</li>
+                        <li>Smart applications</li>
+                    </ul>
+                </div>
+                <div class="path-dot"></div>
+                <div></div>
+            </div>
+
+            <div class="path-item reveal">
+                <div></div>
+                <div class="path-content">
+                    <div class="path-number">4</div>
+                    <h3 class="path-title">Build Your Portfolio</h3>
+                    <p class="path-description">
+                        Create impressive projects, build your portfolio, and prepare for competitions, internships, or
+                        university.
+                    </p>
+                    <ul class="path-features">
+                        <li>Advanced projects</li>
+                        <li>Portfolio development</li>
+                        <li>Competition preparation</li>
+                        <li>Career readiness</li>
+                    </ul>
+                </div>
+                <div class="path-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Education Section -->
+    <section class="ai-education" id="ai-education">
+        <div class="ai-container">
+            <div class="ai-header reveal">
+                <div class="section-badge">AI Education</div>
+                <h2 class="section-title">Learn to Use AI Responsibly</h2>
+                <p class="section-description">
+                    Understanding AI is not just about using it—it's about using it wisely, ethically, and creatively
+                </p>
+            </div>
+
+            <div class="ai-grid">
+                <div class="ai-card reveal">
+                    <span class="ai-icon">🧠</span>
+                    <h3 class="ai-card-title">Understand How AI Works</h3>
+                    <p class="ai-card-description">
+                        Learn the fundamentals of artificial intelligence, machine learning, and how computers can
+                        "think" and learn.
+                    </p>
+                </div>
+
+                <div class="ai-card reveal">
+                    <span class="ai-icon">✅</span>
+                    <h3 class="ai-card-title">Use AI Responsibly</h3>
+                    <p class="ai-card-description">
+                        Understand ethics, privacy, and the right way to use AI tools like ChatGPT, image generators,
+                        and more.
+                    </p>
+                </div>
+
+                <div class="ai-card reveal">
+                    <span class="ai-icon">🎨</span>
+                    <h3 class="ai-card-title">Create with AI</h3>
+                    <p class="ai-card-description">
+                        Build your own AI-powered projects, from chatbots to image recognition apps and smart
+                        assistants.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="section-header reveal">
+            <div class="section-badge">Popular Courses</div>
+            <h2 class="section-title">Start Your Adventure</h2>
+            <p class="section-description">
+                Choose from our most popular courses designed by education experts and loved by students
+            </p>
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card reveal">
+                <div class="course-header">🎮</div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <span class="course-badge age">Ages 10-12</span>
+                        <span class="course-badge level">Beginner</span>
+                    </div>
+                    <h3 class="course-title">Scratch Game Development</h3>
+                    <p class="course-description">
+                        Create your own games! Learn coding through fun, interactive projects and bring your ideas to
+                        life.
+                    </p>
+                    <div class="course-footer">
+                        <span class="course-duration">12 weeks</span>
+                        <a href="#" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card reveal">
+                <div class="course-header">🐍</div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <span class="course-badge age">Ages 13-15</span>
+                        <span class="course-badge level">Intermediate</span>
+                    </div>
+                    <h3 class="course-title">Python Programming</h3>
+                    <p class="course-description">
+                        Master Python! From basics to building real apps, games, and even AI projects.
+                    </p>
+                    <div class="course-footer">
+                        <span class="course-duration">16 weeks</span>
+                        <a href="#" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card reveal">
+                <div class="course-header">🌐</div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <span class="course-badge age">Ages 13-16</span>
+                        <span class="course-badge level">Intermediate</span>
+                    </div>
+                    <h3 class="course-title">Web Development Pro</h3>
+                    <p class="course-description">
+                        Build stunning websites! Learn HTML, CSS, JavaScript and create your own online portfolio.
+                    </p>
+                    <div class="course-footer">
+                        <span class="course-duration">20 weeks</span>
+                        <a href="#" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card reveal">
+                <div class="course-header">🤖</div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <span class="course-badge age">Ages 14-18</span>
+                        <span class="course-badge level">Advanced</span>
+                    </div>
+                    <h3 class="course-title">AI & Machine Learning</h3>
+                    <p class="course-description">
+                        Enter the world of AI! Build smart apps, understand machine learning, and use AI responsibly.
+                    </p>
+                    <div class="course-footer">
+                        <span class="course-duration">24 weeks</span>
+                        <a href="#" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card reveal">
+                <div class="course-header">📱</div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <span class="course-badge age">Ages 15-18</span>
+                        <span class="course-badge level">Advanced</span>
+                    </div>
+                    <h3 class="course-title">Mobile App Development</h3>
+                    <p class="course-description">
+                        Create real mobile apps! Build for iOS and Android and publish your apps to app stores.
+                    </p>
+                    <div class="course-footer">
+                        <span class="course-duration">20 weeks</span>
+                        <a href="#" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card reveal">
+                <div class="course-header">🎨</div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <span class="course-badge age">Ages 12-16</span>
+                        <span class="course-badge level">All Levels</span>
+                    </div>
+                    <h3 class="course-title">Creative Coding</h3>
+                    <p class="course-description">
+                        Code meets art! Create animations, interactive art, music visualizers, and digital masterpieces.
+                    </p>
+                    <div class="course-footer">
+                        <span class="course-duration">14 weeks</span>
+                        <a href="#" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Trust Section -->
+    <section class="parent-trust">
+        <div class="section-header reveal">
+            <div class="section-badge">For Parents</div>
+            <h2 class="section-title">Why Parents Trust Arrow Academy</h2>
+            <p class="section-description">
+                Safe, certified, and proven to deliver real results for young learners
+            </p>
+        </div>
+
+        <div class="trust-grid">
+            <div class="trust-card reveal">
+                <div class="trust-icon">🛡️</div>
+                <div class="trust-content">
+                    <h3>Safe Learning Environment</h3>
+                    <p>
+                        COPPA-compliant platform with certified instructors. Your child's safety and privacy are our top
+                        priority with monitored sessions and secure platforms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="trust-card reveal">
+                <div class="trust-icon">👨‍🏫</div>
+                <div class="trust-content">
+                    <h3>Expert Instructors</h3>
+                    <p>
+                        All our teachers are certified educators with real-world tech experience. They know how to make
+                        learning fun and effective for kids.
+                    </p>
+                </div>
+            </div>
+
+            <div class="trust-card reveal">
+                <div class="trust-icon">📊</div>
+                <div class="trust-content">
+                    <h3>Progress Tracking</h3>
+                    <p>
+                        Get detailed reports on your child's progress. See what they're learning, their achievements,
+                        and areas where they excel.
+                    </p>
+                </div>
+            </div>
+
+            <div class="trust-card reveal">
+                <div class="trust-icon">🏆</div>
+                <div class="trust-content">
+                    <h3>Proven Results</h3>
+                    <p>
+                        98% parent satisfaction rate. Our students win competitions, build real projects, and develop
+                        future-ready skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header reveal">
+            <div class="section-badge">Student Success</div>
+            <h2 class="section-title">What Students & Parents Say</h2>
+            <p class="section-description">
+                Real stories from our amazing community of young coders
+            </p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "My daughter loves the Python course! She built her first game in just 3 weeks and can't stop
+                    talking about it. The instructors are patient and amazing."
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👩</div>
+                    <div class="testimonial-info">
+                        <h4>Sarah Martinez</h4>
+                        <p>Parent of 13-year-old student</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "I learned how to make websites and now I'm building one for my school project! Arrow Academy makes
+                    coding so much fun and easy to understand."
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👦</div>
+                    <div class="testimonial-info">
+                        <h4>Alex Chen, 15</h4>
+                        <p>Web Development Student</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">
+                    "The AI course was incredible! I built my own chatbot and learned about responsible AI usage. This
+                    is preparing me for my dream career in tech."
+                </p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">👧</div>
+                    <div class="testimonial-info">
+                        <h4>Maya Patel, 17</h4>
+                        <p>AI & ML Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header reveal">
+            <div class="section-badge">FAQ</div>
+            <h2 class="section-title">Common Questions</h2>
+            <p class="section-description">
+                Everything you need to know about Arrow Academy
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item reveal">
+                <div class="faq-question">Does my child need prior coding experience?</div>
+                <div class="faq-answer">
+                    <p>Not at all! We have courses for complete beginners starting from age 10. Our beginner courses
+                        teach everything from scratch with fun, visual tools like Scratch before moving to text-based
+                        programming.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-question">What equipment does my child need?</div>
+                <div class="faq-answer">
+                    <p>Just a computer or laptop with internet connection! All our software and tools are free and
+                        web-based. We'll guide you through the simple setup process on day one.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-question">How are classes conducted?</div>
+                <div class="faq-answer">
+                    <p>We offer both live online classes and self-paced video courses. Live classes are small groups
+                        (max 8 students) for personalized attention. All sessions are recorded for review.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-question">Is the platform safe for kids?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! We're COPPA compliant and use secure, monitored platforms. All instructors are
+                        background-checked and certified. Parents have full access to monitoring tools and progress
+                        reports.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-question">What if my child needs help between classes?</div>
+                <div class="faq-answer">
+                    <p>Students have access to our dedicated support community, office hours with instructors, and a
+                        moderated student forum. We're here to help whenever they need it!</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <div class="faq-question">Do you offer certificates?</div>
+                <div class="faq-answer">
+                    <p>Yes! Students receive certificates upon course completion and can earn digital badges for
+                        achievements. Advanced students can work toward our verified portfolio certification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="enroll">
+        <div class="cta-container reveal">
+            <h2 class="cta-title">Ready to Start Your Coding Journey?</h2>
+            <p class="cta-description">
+                Join 5,000+ students learning programming and AI. Start with a free trial class today!
+            </p>
+            <div class="cta-actions">
+                <a href="#" class="btn btn-white">Start Free Trial 🚀</a>
+                <a href="#" class="btn btn-outline">Talk to an Advisor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Arrow Academy</h3>
+                    <p>
+                        Empowering the next generation of innovators with world-class coding and AI education. Learning
+                        should be fun, safe, and inspiring!
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">👍</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#courses">Scratch Programming</a></li>
+                        <li><a href="#courses">Python</a></li>
+                        <li><a href="#courses">Web Development</a></li>
+                        <li><a href="#courses">AI & ML</a></li>
+                        <li><a href="#courses">Mobile Apps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#age-groups">Age Groups</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Parent Guide</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arrow Academy. All rights reserved. Made with ❤️ for young innovators everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/translations.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/academy.js"></script>
+</body>
+
+</html>
