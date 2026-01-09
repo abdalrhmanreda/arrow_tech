@@ -13,6 +13,7 @@ function renderTechWebsite() {
     // renderPortfolioSection();
     renderCTASection();
     renderClientsSection();
+    renderScheduleSection();
     renderContactSection();
     renderFooter();
 }
@@ -266,6 +267,79 @@ function renderClientsSection() {
                         <div class="category-title">${category.title}</div>
                     </div>
                 `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+// Schedule Section
+function renderScheduleSection() {
+    const schedule = techData.schedule;
+    const section = document.querySelector('.schedule');
+    if (!section) return;
+
+    // Generate calendar days
+    let calendarDays = "";
+    for (let i = 1; i <= 30; i++) {
+        const isSelected = i === 15 ? "selected" : "";
+        const isToday = i === 8 ? "today" : "";
+        calendarDays += `<div class="calendar-day ${isSelected} ${isToday}">${i}</div>`;
+    }
+
+    section.innerHTML = `
+        <div class="schedule-container reveal">
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button class="calendar-nav">&lt;</button>
+                    <h3>October 2023</h3>
+                    <button class="calendar-nav">&gt;</button>
+                </div>
+                <div class="calendar-weekdays">
+                    ${schedule.days.map(day => `<span>${day}</span>`).join('')}
+                </div>
+                <div class="calendar-grid">
+                    ${calendarDays}
+                </div>
+                <div class="time-slots">
+                    ${schedule.timeSlots.map(time => `<div class="time-slot">${time}</div>`).join('')}
+                </div>
+            </div>
+
+            <div class="schedule-form-wrapper">
+                <div class="schedule-header">
+                    <h2>${schedule.title}</h2>
+                    <p>${schedule.subtitle}</p>
+                </div>
+                <form class="schedule-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="john@example.com">
+                    </div>
+                     <div class="form-group">
+                        <label>Video Call Preference</label>
+                        <div class="video-options">
+                            <label class="video-option">
+                                <input type="radio" name="video" checked>
+                                <span class="video-box">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-video"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                                   Zoom
+                                </span>
+                            </label>
+                            <label class="video-option">
+                                <input type="radio" name="video">
+                                <span class="video-box">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-camera"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                                   Google Meet
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit btn-primary">Confirm Booking</button>
+                </form>
             </div>
         </div>
     `;

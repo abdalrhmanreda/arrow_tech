@@ -13,7 +13,7 @@ const techData = {
         },
         description: "We craft cutting-edge software solutions that transform businesses and drive digital excellence. From AI-powered applications to cloud-native architectures.",
         buttons: [
-            { text: "Get a Free Consultation", href: "#contact", type: "primary" },
+            { text: "Get a Free Consultation", href: "#schedule", type: "primary" },
             { text: "View Our Work", href: "#portfolio", type: "secondary" }
         ],
         floatingCards: [
@@ -234,7 +234,7 @@ const techData = {
         title: "Ready to Transform Your Business?",
         description: "Let's discuss how our expertise can help you achieve your digital goals and drive innovation.",
         buttons: [
-            { text: "Schedule a Consultation", href: "#contact", type: "white" },
+            { text: "Schedule a Consultation", href: "#schedule", type: "white" },
             { text: "View More Projects", href: "#portfolio", type: "outline" }
         ]
     },
@@ -260,6 +260,15 @@ const techData = {
                 title: "Entrepreneurs & Founders"
             }
         ]
+    },
+
+    // Schedule Section
+    schedule: {
+        title: "Schedule Your Free Consultation",
+        subtitle: "Choose a time that works for you to discuss your project.",
+        months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        days: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+        timeSlots: ["10:00 AM", "11:00 AM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM"]
     },
 
     // Contact Section
@@ -305,30 +314,30 @@ const techData = {
         },
         links: [
             {
-                title: "Services",
-                items: [
-                    { text: "Software Development", href: "#services" },
-                    { text: "Mobile Apps", href: "#services" },
-                    { text: "Cloud Solutions", href: "#services" },
-                    { text: "AI & ML", href: "#services" }
-                ]
-            },
-            {
                 title: "Company",
                 items: [
-                    { text: "About Us", href: "#about" },
-                    { text: "Portfolio", href: "#portfolio" },
-                    { text: "Careers", href: "#careers" },
-                    { text: "Blog", href: "#blog" }
+                    { text: "Home", href: "#home" },
+                    { text: "Who We Are", href: "#about" },
+                    { text: "Process", href: "#process" },
+                    { text: "Schedule", href: "#schedule" }
                 ]
             },
             {
-                title: "Resources",
+                title: "Services",
                 items: [
-                    { text: "Documentation", href: "#docs" },
-                    { text: "Support", href: "#support" },
-                    { text: "Privacy Policy", href: "#privacy" },
-                    { text: "Terms of Service", href: "#terms" }
+                    { text: "Custom Software", href: "#services" },
+                    { text: "Mobile Apps", href: "#services" },
+                    { text: "Cloud Solutions", href: "#services" },
+                    { text: "AI & Machine Learning", href: "#services" }
+                ]
+            },
+            {
+                title: "Contact",
+                items: [
+                    { text: "Get a Consultation", href: "#schedule" },
+                    { text: "Send a Message", href: "#contact" },
+                    { text: "arrows.info.company@gmail.com", href: "mailto:arrows.info.company@gmail.com" },
+                    { text: "01111400729", href: "tel:+201111400729" }
                 ]
             }
         ],
