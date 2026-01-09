@@ -336,13 +336,14 @@ body {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: var(--accent-blue);
     color: white;
     box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
+    background: var(--accent-blue-dark);
     box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
@@ -1686,6 +1687,7 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* ================================
    🌍 RTL SUPPORT (Arabic)
    ================================ */
